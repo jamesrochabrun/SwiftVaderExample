@@ -30,14 +30,22 @@ class Vader: GenericAPI {
     public func get<T: Resource>(_ value: T.Type, completion: @escaping (Result<T?, APIError>) -> Void) {
         
         guard let decodedAssociatedType = value.T.self as? Decodable.Type else { return }
-        guard let resource = VaderResource(T: decodedAssociatedType, id: nil) else { return }
+        guard let resource = VaderResource(T: decodedAssociatedType, id: nil, query: nil) else { return }
         let request = resource.request
         self.fetch(with: request, completion: completion)
     }
     
-    public func get<T: Decodable>(_ value: T.Type, withID id: String, completion: @escaping (Result<T?, APIError>) -> Void)  {
+    public func search<T: Decodable>(_ value: T.Type, withID id: String, completion: @escaping (Result<T?, APIError>) -> Void)  {
         
-        guard let resource = VaderResource(T: value, id: id) else { return }
+        guard let resource = VaderResource(T: value, id: id, query: nil) else { return }
+        let request = resource.request
+        self.fetch(with: request, completion: completion)
+    }
+    
+    public func search<T: Resource>(_ value: T.Type, query: String, completion: @escaping (Result<T?, APIError>) -> Void)  {
+        
+        guard let decodedAssociatedType = value.T.self as? Decodable.Type else { return }
+        guard let resource = VaderResource(T: decodedAssociatedType, id: nil, query: query) else { return }
         let request = resource.request
         self.fetch(with: request, completion: completion)
     }
