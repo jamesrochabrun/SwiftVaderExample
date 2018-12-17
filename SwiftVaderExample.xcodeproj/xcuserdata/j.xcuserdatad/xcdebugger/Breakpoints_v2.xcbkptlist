@@ -2,4 +2,70 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftVaderExample/Networking/Vader.swift"
+            timestampString = "565422154.31761"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "search(_:withID:wookiee:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftVaderExample/Networking/Vader.swift"
+            timestampString = "565422154.317984"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "search(_:withID:wookiee:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 2 of SwiftVaderExample.Vader.search&lt;A where A: Swift.Decodable&gt;(_: A.Type, withID: Swift.String, wookiee: Swift.Bool, completion: (SwiftVaderExample.Result&lt;Swift.Optional&lt;A&gt;, SwiftVaderExample.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "SwiftVaderExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/j/Desktop/iOS/Swift/SwiftVaderExample/SwiftVaderExample/Networking/Vader.swift"
+                  timestampString = "565422154.34288"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftVaderExample.Vader.search&lt;A where A: Swift.Decodable&gt;(_: A.Type, withID: Swift.String, wookiee: Swift.Bool, completion: (SwiftVaderExample.Result&lt;Swift.Optional&lt;A&gt;, SwiftVaderExample.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "SwiftVaderExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/j/Desktop/iOS/Swift/SwiftVaderExample/SwiftVaderExample/Networking/Vader.swift"
+                  timestampString = "565422154.3456841"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "102">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

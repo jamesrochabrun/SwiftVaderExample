@@ -14,11 +14,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        Vader().search(People.self, withID: "1") { (n) in dump(n) }
+        Vader().search(PeopleInWookie.self, withID: "1", wookiee: true) { (n) in
+            switch n {
+            case .success(let n): dump(n)
+            case .failure(let err): print("\(err)")
+            }
+        }
 
-        Vader().get(Resources<People>.self) { (n) in dump(n) }
-        
-        Vader().search(Resources<People>.self, query: "r2") { (n) in dump(n) }
+//        Vader().get(Resources<People>.self) { (n) in dump(n) }
+//
+//        Vader().search(Resources<People>.self, query: "r2") { (n) in dump(n) }
     }
 }
 

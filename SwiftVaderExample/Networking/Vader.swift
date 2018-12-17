@@ -27,25 +27,25 @@ class Vader: GenericAPI {
         }, completion: completion)
     }
     
-    public func get<T: Resource>(_ value: T.Type, completion: @escaping (Result<T?, APIError>) -> Void) {
+    public func get<T: Resource>(_ value: T.Type, wookiee: Bool = false, completion: @escaping (Result<T?, APIError>) -> Void) {
         
         guard let decodedAssociatedType = value.T.self as? Decodable.Type else { return }
-        guard let resource = VaderResource(T: decodedAssociatedType, id: nil, query: nil) else { return }
+        guard let resource = VaderResource(T: decodedAssociatedType, id: nil, query: nil, wookiee: wookiee) else { return }
         let request = resource.request
         self.fetch(with: request, completion: completion)
     }
     
-    public func search<T: Decodable>(_ value: T.Type, withID id: String, completion: @escaping (Result<T?, APIError>) -> Void)  {
+    public func search<T: Decodable>(_ value: T.Type, withID id: String, wookiee: Bool = false, completion: @escaping (Result<T?, APIError>) -> Void)  {
         
-        guard let resource = VaderResource(T: value, id: id, query: nil) else { return }
+        guard let resource = VaderResource(T: value, id: id, query: nil, wookiee: wookiee) else { return }
         let request = resource.request
         self.fetch(with: request, completion: completion)
     }
     
-    public func search<T: Resource>(_ value: T.Type, query: String, completion: @escaping (Result<T?, APIError>) -> Void)  {
+    public func search<T: Resource>(_ value: T.Type, query: String, wookiee: Bool = false, completion: @escaping (Result<T?, APIError>) -> Void)  {
         
         guard let decodedAssociatedType = value.T.self as? Decodable.Type else { return }
-        guard let resource = VaderResource(T: decodedAssociatedType, id: nil, query: query) else { return }
+        guard let resource = VaderResource(T: decodedAssociatedType, id: nil, query: query, wookiee: wookiee) else { return }
         let request = resource.request
         self.fetch(with: request, completion: completion)
     }
