@@ -10,22 +10,22 @@ import Foundation
 
 public struct People: Decodable {
     
-    var name: String?
-    var birthYear: String?
-    var eyeColor: String?
-    var gender: String?
-    var hairColor: String?
-    var height: String?
-    var mass: String?
-    var skinColor: String?
-    var homeworld: String?
-    var films: [String]?
-    var species: [String]?
-    var starships: [String]?
-    var vehicles: [String]?
-    var url: String?
-    var created: String?
-    var edited: String?
+    let name: String?
+    let birthYear: String?
+    let eyeColor: String?
+    let gender: String?
+    let hairColor: String?
+    let height: String?
+    let mass: String?
+    let skinColor: String?
+    let homeworld: String?
+    let films: [String]?
+    let species: [String]?
+    let starships: [String]?
+    let vehicles: [String]?
+    let url: String?
+    let created: String?
+    let edited: String?
 }
 
 

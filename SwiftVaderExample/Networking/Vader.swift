@@ -21,9 +21,8 @@ class Vader: GenericAPI {
     }
     
     private func fetch<T: Decodable>(with request: URLRequest, completion: @escaping (Result<T?, APIError>) -> Void) {
-        fetch(with: request, decode: { json -> T? in
-            guard let resource = json as? T else { return nil }
-            return resource
+        fetch(with: request, decode: { json in
+            return json as? T
         }, completion: completion)
     }
     

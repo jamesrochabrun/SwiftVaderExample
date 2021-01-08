@@ -21,7 +21,7 @@ public enum VaderResource {
 extension VaderResource: Endpoint {
     
     var base: String {
-        return "https://swapi.co"
+        return "https://swapi.dev"
     }
     
     var path: String {

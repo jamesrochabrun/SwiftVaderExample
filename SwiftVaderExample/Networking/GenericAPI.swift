@@ -31,7 +31,7 @@ extension GenericAPI {
                     do {
                         let decoder = JSONDecoder()
                         decoder.keyDecodingStrategy = .convertFromSnakeCase
-                        let genericModel = try decoder.decode(decodingType, from: data)
+                        let genericModel = try decoder.decode(T.self, from: data)
                         completion(genericModel, nil)
                     } catch let error {
                         completion(nil, .jsonConversionFailure(description: error.localizedDescription))
